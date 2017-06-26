@@ -84,7 +84,7 @@ public class Diagrama extends JPanel {
             RenderingHints.KEY_ANTIALIASING,
             RenderingHints.VALUE_ANTIALIAS_ON
         );
-//        
+//        https://docs.oracle.com/javase/tutorial/2d/advanced/quality.html
 //        rh.add(new RenderingHints(
 //            RenderingHints.KEY_TEXT_ANTIALIASING,
 //            RenderingHints.VALUE_TEXT_ANTIALIAS_ON

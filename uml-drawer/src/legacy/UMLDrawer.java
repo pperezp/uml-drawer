@@ -1,10 +1,10 @@
 package legacy;
 
-public class UmlDrawer extends javax.swing.JFrame {
+public class UMLDrawer extends javax.swing.JFrame {
     private Diagrama panelDiagrama;
     private int idActorGenerado, idCasoGenerado;
         
-    public UmlDrawer() {
+    public UMLDrawer() {
         initComponents();
         
         panelDiagrama = new Diagrama();
@@ -119,7 +119,7 @@ public class UmlDrawer extends javax.swing.JFrame {
        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UmlDrawer().setVisible(true);
+                new UMLDrawer().setVisible(true);
             }
         });
     }
