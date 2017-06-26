@@ -57,6 +57,9 @@ public class TestLinea2D extends javax.swing.JFrame {
         uniones.add(new Union(1, 1));
         uniones.add(new Union(1, 2));
         uniones.add(new Union(1, 3));
+        uniones.add(new Union(2, 3));
+        uniones.add(new Union(3, 4));
+        uniones.add(new Union(3, 5));
 
         p = new Panel(acts, casos, uniones);
         p.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
