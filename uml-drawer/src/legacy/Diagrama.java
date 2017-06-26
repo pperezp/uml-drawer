@@ -68,8 +68,12 @@ public class Diagrama extends JPanel {
     }
     
     public void addUnion(Union u){
-        System.out.println("Add union: "+u);
-        uniones.add(u);
+        if(!existeUnion(u)){
+            System.out.println("Add union: "+u);
+            uniones.add(u);
+        }else{
+            System.out.println("Ya lo contiene");
+        }
     }
 
     @Override
@@ -161,8 +165,8 @@ public class Diagrama extends JPanel {
             g.drawOval(c.getX() - 15, c.getY() - 15, c.getWidth() + 30, c.getHeight() + 30);
 
             /*Pintar caso de uso*/
-            g.setColor(Color.yellow);
-            g.fillOval(c.getX() - 14, c.getY() - 14, c.getWidth() + 28, c.getHeight() + 28);
+//            g.setColor(Color.yellow);
+//            g.fillOval(c.getX() - 14, c.getY() - 14, c.getWidth() + 28, c.getHeight() + 28);
             /*Pintar caso de uso*/
             posAlto = posAlto + posAlto_antiguo;
         }
@@ -188,5 +192,15 @@ public class Diagrama extends JPanel {
             );
 
         }
+    }
+
+    private boolean existeUnion(Union u) {
+        for(Union un : uniones){
+            if(u.getIdActor() == un.getIdActor() && u.getIdCasoDeUso() == un.getIdCasoDeUso()){
+                return true;
+            }
+        }
+        
+        return false;
     }
 }
